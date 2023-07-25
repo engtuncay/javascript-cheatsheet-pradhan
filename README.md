@@ -190,13 +190,12 @@ JavaScript is a dynamic interpreted language that powers the web. It is widely u
 - [Map method](#map-method)
         - [Reference](#reference-4)
 - [JavaScript Promises](#javascript-promises)
-        - [References](#references-2)
 - [JavaScript Async/Await](#javascript-asyncawait)
     - [Async](#async)
     - [Await](#await)
-    - [References](#references-3)
+    - [References](#references-2)
 - [Object Oriented Programming - OOP](#object-oriented-programming---oop)
-      - [Complementary Resources](#complementary-resources)
+- [Complementary Resources](#complementary-resources)
 
 
 <a name="js-motivation"></a>
@@ -9533,9 +9532,9 @@ func1()
 //Sunil!! - Very bad bro. Reason: Sorry not fulfilled
 ```
 
-JavaScript Promises are better substitute of callback funtion.
+JavaScript Promises are better substitute of callback function.
 
-###### References
+**References**
 
 - https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261
 - https://www.youtube.com/watch?v=2IPw-mWe10U
@@ -9641,7 +9640,7 @@ polymorphism means you are writing a single function() but it works differently 
 
 <a name="com-res"></a>
 
-##### Complementary Resources
+## Complementary Resources
 
 When you struggle to understand a concept, I suggest you look for answers on the following resources:
 
