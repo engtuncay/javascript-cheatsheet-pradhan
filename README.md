@@ -1,5 +1,5 @@
- <p align="center">
-  <img width="256" height="256" src="/img/JavaScript_logo_large.png">
+<p align="center">
+  <img width="256" height="256" src="./img/JavaScript_logo_large.png">
 </p>
 
 <h1 align="center">JavaScript Cheatsheet</h1>
@@ -12,33 +12,191 @@ JavaScript is a dynamic interpreted language that powers the web. It is widely u
 
 ## Table of Contents
 
-- [Motivation](#js-motivation)
-- [JavaScript Basics](#js-basics)
-- [Variables](#js-variables)
-- [Data types](#js-datatypes)
-- [Operators](#js-operators)
-- [Branches and Loops](#js-branch-loops)
-- [Function](#js-function)
-- [Object](#js-object)
-- [Array](#js-arrays)
-- [String](#js-string)
-- [Number](#js-number)
-- [Prototype](#js-prototype)
-- [this keyword](#js-this)
-- [Composition or Mixins](#js-mixins)
-- [Class](#js-class)
-- [Variable Hoisting](#js-variable-hosting)
-- [Rest & Spread Operator](#js-rest-spread)
-- [Module - Import & Export](#js-module)
-- [Destructuring - Array & Object](#js-destructuring)
-- [Symbols](#js-symbols)
-- [Generators](#js-generators)
-- [Sets & Maps](#js-sets-maps)
-- [Map method](#js-map-method)
-- [JavaScript Promises](#js-promises)
-- [JavaScript Async/Await](#js-async-await)
-- [Object Oriented Programming - OOP](#js-oop)
-- [Complementary Resources](#com-res)
+- [Table of Contents](#table-of-contents)
+- [Motivation](#motivation)
+- [JavaScript Basics](#javascript-basics)
+  - [Further Reading](#further-reading)
+  - [JavaScript comments](#javascript-comments)
+  - [JavaScript Literals \& Identifiers](#javascript-literals--identifiers)
+  - [JavaScript expression](#javascript-expression)
+  - [JavaScript statement](#javascript-statement)
+  - [Terminate statements in JavaScript](#terminate-statements-in-javascript)
+  - [JavaScript reserved words](#javascript-reserved-words)
+  - [JavaScript \& Unicode](#javascript--unicode)
+- [Variables](#variables)
+- [Data types](#data-types)
+  - [Types of data](#types-of-data)
+  - [Further Reading](#further-reading-1)
+  - [Undefined:](#undefined)
+  - [Boolean:](#boolean)
+  - [Number:](#number)
+  - [String:](#string)
+  - [BigInt:](#bigint)
+  - [Symbol:](#symbol)
+  - [Null:](#null)
+  - [Type Conversions OR Typecasting OR Coercion](#type-conversions-or-typecasting-or-coercion)
+- [JavaScript Operators](#javascript-operators)
+  - [Operator Precedence:](#operator-precedence)
+  - [Comparison Operators:](#comparison-operators)
+  - [Bitwise Operators:](#bitwise-operators)
+  - [Assignment Operators:](#assignment-operators)
+  - [Exponentiation Operator:](#exponentiation-operator)
+  - [Increment and decrement Operators:](#increment-and-decrement-operators)
+  - [`typeof` operator:](#typeof-operator)
+- [Branches and Loops](#branches-and-loops)
+  - [Branching Out:](#branching-out)
+    - [if statement](#if-statement)
+    - [if...else statement](#ifelse-statement)
+    - [Nested if statement](#nested-if-statement)
+    - [if-else-if ladder or else...if statement](#if-else-if-ladder-or-elseif-statement)
+    - [Switch statement](#switch-statement)
+    - [Conditional (Ternary) operator](#conditional-ternary-operator)
+    - [Multiple conditional (Ternary) operators](#multiple-conditional-ternary-operators)
+  - [Loop De Loop:](#loop-de-loop)
+    - [for loop](#for-loop)
+    - [Nested for loop](#nested-for-loop)
+    - [while loop](#while-loop)
+    - [Nested while loop](#nested-while-loop)
+    - [do...while loop](#dowhile-loop)
+    - [Nested do...while loop](#nested-dowhile-loop)
+    - [`break` and `continue` keyword in loop](#break-and-continue-keyword-in-loop)
+    - [for...in Loop](#forin-loop)
+    - [for...of Loop](#forof-loop)
+  - [Reference](#reference)
+- [JavaScript Function](#javascript-function)
+    - [Creating and calling a function](#creating-and-calling-a-function)
+    - [Function with parameters](#function-with-parameters)
+    - [Call function with parameter](#call-function-with-parameter)
+    - [Arguments object in JavaScript](#arguments-object-in-javascript)
+    - [Default parameter in JavaScript](#default-parameter-in-javascript)
+    - [Return statement in JavaScript function](#return-statement-in-javascript-function)
+    - [Variable scope in JavaScript function](#variable-scope-in-javascript-function)
+    - [Block scope in JavaScript function:](#block-scope-in-javascript-function)
+    - [Closure in JavaScript function](#closure-in-javascript-function)
+    - [Function expression](#function-expression)
+    - [Anonymous function](#anonymous-function)
+        - [Reference](#reference-1)
+    - [Arrow function](#arrow-function)
+    - [Immediately invoked functions expression in JavaScript(IIFE)](#immediately-invoked-functions-expression-in-javascriptiife)
+    - [Callback function](#callback-function)
+        - [References](#references)
+- [Object](#object)
+    - [Object Literal in JavaScript](#object-literal-in-javascript)
+    - [Object Constructor in JavaScript](#object-constructor-in-javascript)
+    - [Adding Object properties and methods in JavaScript](#adding-object-properties-and-methods-in-javascript)
+    - [Deleting Object properties and methods in JavaScript](#deleting-object-properties-and-methods-in-javascript)
+    - [Factory function in JavaScript object](#factory-function-in-javascript-object)
+    - [Constructor in JavaScript](#constructor-in-javascript)
+    - [How to check properties exists in JavaScript](#how-to-check-properties-exists-in-javascript)
+    - [Object keys(object\_name)](#object-keysobject_name)
+- [Array](#array)
+  - [Array Literal](#array-literal)
+  - [Array Constructor](#array-constructor)
+  - [Modifying array elements](#modifying-array-elements)
+  - [Removing array elements](#removing-array-elements)
+  - [Array length property](#array-length-property)
+  - [Iteration of array using for loop](#iteration-of-array-using-for-loop)
+  - [forEach Loop](#foreach-loop)
+  - [MultiDimensional array](#multidimensional-array)
+  - [Array Methods](#array-methods)
+    - [`concat()` Method](#concat-method)
+    - [`join()` Method](#join-method)
+    - [`reverse()` Method](#reverse-method)
+    - [`slice()` Method](#slice-method)
+    - [`splice()` Method](#splice-method)
+    - [`toString()` Method](#tostring-method)
+    - [`Array.isArray()` Method](#arrayisarray-method)
+    - [`indexOf()` Method](#indexof-method)
+    - [`fill()` Method](#fill-method)
+    - [`unshift()` Method](#unshift-method)
+    - [`push()` Method](#push-method)
+    - [`shift()` Method](#shift-method)
+    - [`pop()` Method](#pop-method)
+    - [`Boolean()` Method](#boolean-method)
+    - [`includes()` Method](#includes-method)
+    - [`sort()` Method](#sort-method)
+        - [Reference](#reference-2)
+- [String](#string-1)
+    - [String Concatenation](#string-concatenation)
+    - [Template Literal/String Templates](#template-literalstring-templates)
+    - [String length](#string-length)
+  - [String Methods](#string-methods)
+    - [`charAt()` Method](#charat-method)
+    - [`charCodeAt()` Method](#charcodeat-method)
+    - [`toUpperCase()` \& `toLowerCase()` Method](#touppercase--tolowercase-method)
+    - [`trim()` Method](#trim-method)
+    - [`replace()` Method](#replace-method)
+    - [`split()` Method](#split-method)
+    - [`indexOf()` Method](#indexof-method-1)
+    - [`search()` Method](#search-method)
+    - [`slice()` Method](#slice-method-1)
+    - [`substring()` Method](#substring-method)
+    - [`substr()` Method](#substr-method)
+- [Number](#number-1)
+    - [Number with String](#number-with-string)
+    - [NaN - Not a Number](#nan---not-a-number)
+    - [Infinity and Negative Infinity](#infinity-and-negative-infinity)
+  - [Number Methods](#number-methods)
+    - [`toString()` Method](#tostring-method-1)
+    - [`toExponential()` Method](#toexponential-method)
+    - [`toFixed()` Method](#tofixed-method)
+    - [`toPrecision()` Method](#toprecision-method)
+    - [`isInteger()` Method](#isinteger-method)
+    - [`isSafeInteger()` Method](#issafeinteger-method)
+    - [Global JavaScript methods](#global-javascript-methods)
+    - [Math object](#math-object)
+        - [Reference](#reference-3)
+    - [Date object](#date-object)
+    - [Creating date object](#creating-date-object)
+    - [Set Date Methods](#set-date-methods)
+    - [Get Date Methods](#get-date-methods)
+    - [Retrieve Month name and Day name](#retrieve-month-name-and-day-name)
+    - [Format Date and Time](#format-date-and-time)
+    - [Convert Date to String](#convert-date-to-string)
+- [Prototype](#prototype)
+    - [Prototype Object](#prototype-object)
+    - [Prototype Inheritance](#prototype-inheritance)
+- [JavaScript `this`](#javascript-this)
+        - [References](#references-1)
+- [Composition or Mixins](#composition-or-mixins)
+- [JavaScript Class](#javascript-class)
+    - [Class Declaration](#class-declaration)
+    - [Class Expression](#class-expression)
+- [Variable Hoisting](#variable-hoisting)
+- [Rest \& Spread Operator](#rest--spread-operator)
+  - [Rest operator](#rest-operator)
+  - [Spread operator](#spread-operator)
+- [Module - Import \& Export](#module---import--export)
+    - [Module Setup](#module-setup)
+    - [Exporting Module](#exporting-module)
+    - [Named Exports](#named-exports)
+    - [Default Exports](#default-exports)
+    - [Exporting Functions and Classes](#exporting-functions-and-classes)
+    - [Summary - Module - Import \& Export](#summary---module---import--export)
+- [Destructuring - Array \& Object](#destructuring---array--object)
+  - [Array Destructuring:](#array-destructuring)
+  - [Object Destructuring:](#object-destructuring)
+- [JavaScript Symbols](#javascript-symbols)
+  - [Symbol iterator:](#symbol-iterator)
+  - [Iterables and Iterators:](#iterables-and-iterators)
+  - [Iterating Objects:](#iterating-objects)
+- [Generators](#generators)
+- [Sets \& Maps](#sets--maps)
+  - [JavaScript Sets](#javascript-sets)
+    - [WeakSets](#weaksets)
+  - [JavaScript Maps](#javascript-maps)
+    - [Iterating over Maps](#iterating-over-maps)
+    - [WeakMaps](#weakmaps)
+- [Map method](#map-method)
+        - [Reference](#reference-4)
+- [JavaScript Promises](#javascript-promises)
+        - [References](#references-2)
+- [JavaScript Async/Await](#javascript-asyncawait)
+    - [Async](#async)
+    - [Await](#await)
+    - [References](#references-3)
+- [Object Oriented Programming - OOP](#object-oriented-programming---oop)
+      - [Complementary Resources](#complementary-resources)
 
 
 <a name="js-motivation"></a>
@@ -145,7 +303,7 @@ The `defer` attribute is a boolean attribute. When present, it specifies that th
 In other words, downloads the script while the page content is downloading, and executes after the HTML is parsed.
 
 
-###### Further Reading
+### Further Reading
 
 * [Introduction to HTTP/2](https://developers.google.com/web/fundamentals/performance/http2)
 * [Script Tag - async & defer](https://stackoverflow.com/questions/10808109/script-tag-async-defer)
@@ -355,7 +513,7 @@ console.log(x);
 
 ## Data types
 
-### Type of data:
+### Types of data
 
 In JavaScript two types of data type available:
 
@@ -388,7 +546,7 @@ Two derived data types (non-primitive):
 - Object
 - Function
 
-###### Further Reading
+### Further Reading
 
 * [JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 * [Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types)
@@ -1558,7 +1716,7 @@ for (let elValue of arr) {
 //el3
 ```
 
-###### Reference
+### Reference
 
 https://stackoverflow.com/questions/29285897/what-is-the-difference-between-for-in-and-for-of-statements-in-jav#:~:text=Difference%20for..in%20and%20for,values%20of%20an%20iterable%20object.
 
@@ -3281,7 +3439,7 @@ In javascript you can create arrays in two ways:
 </div>
 <br/>
 
-#### Array Literal
+### Array Literal
 
 Syntax:
 
@@ -3334,7 +3492,7 @@ console.log(num);
 </div>
 <br/>
 
-#### Array Constructor
+### Array Constructor
 
 Syntax:
 
@@ -3378,7 +3536,7 @@ This will create an empty array with length five. So this is not a good idea to 
 </div>
 <br/>
 
-#### Modifying array elements
+### Modifying array elements
 
 Example:
 
@@ -3417,7 +3575,7 @@ console.log(stu);
 </div>
 <br/>
 
-#### Removing array elements
+### Removing array elements
 
 Array elements can be removed using the `delete` operator. This operator sets the array element it is invoked on to `undefined` but does not change the arrays’ length.
 
@@ -3439,7 +3597,7 @@ console.log(stu);
 </div>
 <br/>
 
-#### Array length property
+### Array length property
 
 The length property retrieves the index of the next available position at the end of the array. The length property is automatically updated as new elements are added to the array. For this reason, length is commonly used to iterate through all elements of any array.
 
@@ -3458,7 +3616,7 @@ console.log(stu.length);
 </div>
 <br/>
 
-#### Iteration of array using for loop
+### Iteration of array using for loop
 
 Example:
 
@@ -3488,7 +3646,7 @@ for (let i = 0; i <= stu.length - 1; i++) {
 </div>
 <br/>
 
-#### forEach Loop
+### forEach Loop
 
 The `forEach` loop calls a provided function once for each element in an array, in order.
 
@@ -3597,7 +3755,7 @@ So the `key` and `value` are going to be the same. You can just log out either o
 </div>
 <br/>
 
-#### MultiDimensional array
+### MultiDimensional array
 
 Multidimensional array is Arrays of Arrays.In other words, an array that contains an array is called a multidimensional array.
 
@@ -4350,7 +4508,7 @@ console.log(n);
 //output - true
 ```
 
-###### Reference
+**Reference**
 
 - https://www.w3schools.com/jsref/jsref_includes_array.asp
 
@@ -9437,7 +9595,7 @@ async function firstAsync() {
 firstAsync();
 ```
 
-###### References
+#### References
 
 - https://javascript.info/async-await
 - https://medium.com/javascript-in-plain-english/async-await-javascript-5038668ec6eb
